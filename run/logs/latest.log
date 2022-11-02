@@ -1,0 +1,955 @@
+[18:52:24] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.19.2 with Fabric Loader 0.14.9
+[18:52:25] [main/INFO] (FabricLoader) Loading 8 mods:
+	- baritone-meteor 1.19.2-SNAPSHOT
+	- eze 0.0.0
+	- fabric-resource-loader-v0 0.6.1+aeb40ebe90
+	- fabricloader 0.14.9
+	- java 17
+	- meteor-client 0.5.1-1674
+	- minecraft 1.19.2
+	- seedcrackerx-api 2.10.1
+[18:52:25] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/matti/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[18:52:25] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[18:52:25] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[18:52:27] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.properties file on the classpath
+[18:52:27] [main/WARN] (FileUtil) Configuration conflict: there is more than one oshi.architecture.properties file on the classpath
+[18:52:31] [main/INFO] (Minecraft) Building optimized datafixer
+[18:52:39] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:52:41] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
+	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:155) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.<init>(YggdrasilUserApiService.java:55) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createUserApiService(YggdrasilAuthenticationService.java:161) ~[authlib-3.11.49.jar:?]
+	at net.minecraft.client.MinecraftClient.createUserApiService(MinecraftClient.java:711) [minecraft-merged-named.jar:?]
+	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:431) [minecraft-merged-named.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:205) [minecraft-merged-named.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:51) [minecraft-merged-named.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:461) [fabric-loader-0.14.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.14.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.14.9.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:87) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-3.11.49.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-3.11.49.jar:?]
+	... 10 more
+[18:52:41] [Render thread/INFO] (Minecraft) Setting user: Player805
+[18:52:42] [Render thread/WARN] (FabricLoader/Mixin) Discarding @Unique public method getCallbacks in meteor-client.mixins.json:SimpleOptionMixin from mod meteor-client because it already exists in net.minecraft.client.option.SimpleOption
+[18:52:43] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.1 SNAPSHOT
+[18:52:46] [Render thread/INFO] (Minecraft) Narrator library for x64 successfully loaded
+[18:52:46] [Worker-Main-12/ERROR] (Minecraft) Failed to retrieve profile key pair
+java.io.IOException: Could not retrieve profile key pair
+	at net.minecraft.client.util.ProfileKeys.fetchKeyPair(ProfileKeys.java:130) ~[minecraft-merged-named.jar:?]
+	at net.minecraft.client.util.ProfileKeys.method_44291(ProfileKeys.java:69) ~[minecraft-merged-named.jar:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
+[18:52:47] [Render thread/INFO] (Minecraft) Reloading ResourceManager: Default, Fabric Mods (eze, Meteor Client, Fabric Loader, SeedCrackerX API, Fabric Resource Loader (v0))
+[18:52:47] [Render thread/INFO] (Minecraft) [STDOUT]: Baritone settings file not found, resetting.
+[18:52:47] [Render thread/INFO] (Meteor Client) Initializing Meteor Client
+[18:52:48] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: Invalid session id
+[18:52:51] [Render thread/INFO] (Reflections) Reflections took 3116 ms to scan 1 urls, producing 17 keys and 781 values
+[18:52:53] [Render thread/INFO] (Meteor Client) Found 69 font families.
+[18:52:54] [Render thread/INFO] (Reflections) Reflections took 182 ms to scan 1 urls, producing 7 keys and 118 values
+[18:52:57] [Render thread/INFO] (eze-addon) Initializing eze
+[18:52:57] [Render thread/INFO] (Meteor Client) Loading
+[18:52:57] [Render thread/INFO] (Meteor Client) Loaded in 117 milliseconds
+[18:52:57] [Render thread/INFO] (Reflections) Reflections took 137 ms to scan 1 urls, producing 17 keys and 781 values
+[18:52:57] [Render thread/INFO] (Reflections) Reflections took 83 ms to scan 1 urls, producing 7 keys and 118 values
+[18:52:58] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[18:52:58] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[18:52:59] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[18:52:59] [Render thread/INFO] (Minecraft) Sound engine started
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18:52:59] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18:53:00] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[18:53:00] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[18:53:00] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18:53:00] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18:53:03] [Render thread/INFO] (Meteor Client) Checking latest version of Meteor Client
+[18:53:07] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[18:53:07] [Render thread/INFO] (Minecraft) Loaded 1179 advancements
+[18:53:09] [Worker-Main-17/ERROR] (Minecraft) Failed to retrieve profile key pair
+java.io.IOException: Could not retrieve profile key pair
+	at net.minecraft.client.util.ProfileKeys.fetchKeyPair(ProfileKeys.java:130) ~[minecraft-merged-named.jar:?]
+	at net.minecraft.client.util.ProfileKeys.method_44291(ProfileKeys.java:69) ~[minecraft-merged-named.jar:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
+[18:53:09] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.19.2
+[18:53:09] [Server thread/INFO] (Minecraft) Generating keypair
+[18:53:10] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[18:53:15] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:16] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:17] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:18] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:18] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:19] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:20] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:20] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:23] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:24] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:25] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:26] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:28] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:29] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:29] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:30] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:30] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[18:53:31] [Render thread/INFO] (Minecraft) Preparing spawn area: 1%
+[18:53:31] [Render thread/INFO] (Minecraft) Preparing spawn area: 4%
+[18:53:32] [Render thread/INFO] (Minecraft) Preparing spawn area: 7%
+[18:53:32] [Render thread/INFO] (Minecraft) Preparing spawn area: 12%
+[18:53:33] [Render thread/INFO] (Minecraft) Preparing spawn area: 19%
+[18:53:33] [Render thread/INFO] (Minecraft) Preparing spawn area: 22%
+[18:53:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 22%
+[18:53:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 22%
+[18:53:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 22%
+[18:53:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 22%
+[18:53:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 23%
+[18:53:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 23%
+[18:53:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 23%
+[18:53:37] [Worker-Bootstrap-7/INFO] (Minecraft) 4283 Datafixer optimizations took 66393 milliseconds
+[18:53:37] [Render thread/INFO] (Minecraft) Preparing spawn area: 31%
+[18:53:38] [Render thread/INFO] (Minecraft) Preparing spawn area: 42%
+[18:53:38] [Render thread/INFO] (Minecraft) Preparing spawn area: 55%
+[18:53:39] [Render thread/INFO] (Minecraft) Preparing spawn area: 75%
+[18:53:39] [Render thread/INFO] (Minecraft) Time elapsed: 29400 ms
+[18:53:39] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[18:53:39] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[18:53:41] [Server thread/INFO] (Minecraft) Player805[local:E:87d452c2] logged in with entity id 40 at (-25.630229344612676, -60.0, -78.83265921392234)
+[18:53:41] [Render thread/WARN] (FabricLoader/Mixin) Method overwrite conflict for getChunks in meteor-client.mixins.json:ClientChunkMapAccessor from mod meteor-client, previously written by baritone.launch.mixins.MixinChunkArray. Skipping method.
+[18:53:41] [Server thread/INFO] (Minecraft) Player805 joined the game
+[18:53:41] [Render thread/INFO] (Minecraft) [STDOUT]: Baritone world data dir: C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384
+[18:53:41] [Render thread/INFO] (Minecraft) [STDOUT]: Cached world directory: C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:53:41] [Render thread/INFO] (Minecraft) [STDOUT]: Would save waypoints to C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\waypoints
+[18:53:41] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:41] [Render thread/INFO] (Minecraft) Loaded 0 advancements
+[18:53:41] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loading region -1,-1 from disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:53:41] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:42] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loaded region successfully in 514ms
+[18:53:42] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:42] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loading region -1,0 from disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:53:42] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loaded region successfully in 201ms
+[18:53:43] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:43] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loading region 0,-1 from disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:53:43] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loaded region successfully in 77ms
+[18:53:43] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loading region 0,0 from disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:53:44] [pool-2-thread-1/INFO] (Minecraft) [STDOUT]: Loaded region successfully in 118ms
+[18:53:44] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:45] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:46] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.8
+[18:53:46] [Render thread/INFO] (Minecraft) [STDOUT]: -25.6 -60.0 -78.9
+[18:53:46] [Render thread/INFO] (Minecraft) [STDOUT]: -25.4 -60.0 -79.0
+[18:53:46] [Render thread/INFO] (Minecraft) [STDOUT]: -25.3 -60.0 -79.1
+[18:53:46] [Render thread/INFO] (Minecraft) [STDOUT]: -25.1 -60.0 -79.2
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -25.0 -60.0 -79.3
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -24.8 -60.0 -79.4
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -24.6 -60.0 -79.6
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -24.4 -60.0 -79.7
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -24.3 -60.0 -79.8
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -24.1 -60.0 -80.0
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.9 -60.0 -80.1
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.7 -60.0 -80.2
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.6 -60.0 -80.3
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.4 -60.0 -80.5
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.2 -60.0 -80.6
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.1 -60.0 -80.7
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.1 -60.0 -80.7
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.1 -60.0 -80.7
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.7
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.7
+[18:53:47] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.7
+[18:53:48] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.7
+[18:53:48] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.7
+[18:53:48] [Render thread/INFO] (Minecraft) [STDOUT]: -22.9 -60.0 -80.5
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -80.4
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.7 -60.0 -80.2
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.5 -60.0 -80.1
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.4 -60.0 -79.9
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.3 -60.0 -79.7
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.2 -60.0 -79.6
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.1 -60.0 -79.5
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.0 -60.0 -79.4
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.1 -60.0 -79.5
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.2 -60.0 -79.6
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.3 -60.0 -79.7
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.4 -60.0 -79.9
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.5 -60.0 -80.0
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.7 -60.0 -80.4
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -22.9 -60.0 -80.5
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.7
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -23.1 -60.0 -80.9
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -23.3 -60.0 -81.1
+[18:53:49] [Render thread/INFO] (Minecraft) [STDOUT]: -23.4 -60.0 -81.2
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -23.4 -60.0 -81.3
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -23.4 -60.0 -81.3
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -23.4 -60.0 -81.2
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -23.3 -60.0 -81.1
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -23.2 -60.0 -80.9
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -23.0 -60.0 -80.8
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.9 -60.0 -80.6
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -80.4
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.7 -60.0 -80.3
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.5 -60.0 -80.1
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.4 -60.0 -79.9
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.3 -60.0 -79.8
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.4 -60.0 -79.8
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.4 -60.0 -79.9
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.5 -60.0 -80.1
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.1
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:50] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:51] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:52] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:53] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:54] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -60.0 -80.2
+[18:53:55] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6345 -60.0 -80.21332
+[18:53:56] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6345 -60.0 -80.21332
+[18:53:57] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6345 -60.0 -80.21332
+[18:53:58] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6345 -60.0 -80.21332
+[18:53:59] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6345032 -60.0 -80.2133235
+[18:54:00] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6345032 -60.0 -80.2133235
+[18:54:01] [Render thread/INFO] (Minecraft) [STDOUT]: -22.635 -60.0 -80.213
+[18:54:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.635 -60.0 -80.213
+[18:54:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.635 -60.0 -80.213
+[18:54:04] [Render thread/INFO] (Minecraft) [STDOUT]: -22.635 -60.0 -80.213
+[18:54:05] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:06] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:08] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:09] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:10] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:11] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:11] [pool-2-thread-2/INFO] (Minecraft) [STDOUT]: Saving region -1,0 to disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:54:11] [ForkJoinPool.commonPool-worker-1/INFO] (Minecraft) [STDOUT]: Saving region 0,-1 to disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:54:11] [ForkJoinPool.commonPool-worker-3/INFO] (Minecraft) [STDOUT]: Saving region 0,0 to disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:54:11] [ForkJoinPool.commonPool-worker-2/INFO] (Minecraft) [STDOUT]: Saving region -1,-1 to disk C:\Users\matti\OneDrive\Documents\Visual Studio Code\Meteor Client\eze-addon-main\run\saves\1\.\baritone\minecraft\overworld_384\cache
+[18:54:11] [ForkJoinPool.commonPool-worker-3/INFO] (Minecraft) [STDOUT]: Saved region successfully
+[18:54:11] [pool-2-thread-2/INFO] (Minecraft) [STDOUT]: Saved region successfully
+[18:54:11] [ForkJoinPool.commonPool-worker-1/INFO] (Minecraft) [STDOUT]: Saved region successfully
+[18:54:11] [ForkJoinPool.commonPool-worker-2/INFO] (Minecraft) [STDOUT]: Saved region successfully
+[18:54:11] [pool-2-thread-2/INFO] (Minecraft) [STDOUT]: World save took 165ms
+[18:54:12] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:13] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:14] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:15] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:16] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:17] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:18] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:19] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:54:19] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[18:54:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:overworld
+[18:54:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_end
+[18:54:19] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_nether
+[18:57:55] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:57:55] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[18:57:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:overworld
+[18:57:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_end
+[18:57:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_nether
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -60.0 -80.21
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.66 -60.0 -80.31
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.69 -60.0 -80.46
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.71 -60.0 -80.63
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.73 -60.0 -80.83
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.74 -60.0 -81.03
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.75 -60.0 -81.24
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.76 -60.0 -81.46
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.77 -60.0 -81.67
+[18:58:02] [Render thread/INFO] (Minecraft) [STDOUT]: -22.78 -60.0 -81.89
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.78 -60.0 -82.1
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.79 -60.0 -82.32
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.43
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.5
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.53
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.55
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.56
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.57
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.57
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.67
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -82.82
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -83.0
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.8 -60.0 -83.2
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.87 -60.0 -83.38
+[18:58:03] [Render thread/INFO] (Minecraft) [STDOUT]: -22.98 -60.0 -83.54
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -23.12 -60.0 -83.7
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -23.26 -60.0 -83.86
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -23.41 -60.0 -84.02
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -23.59 -60.0 -84.11
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -23.78 -60.0 -84.15
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -23.99 -60.0 -84.18
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -24.2 -60.0 -84.19
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -24.41 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -24.62 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -24.84 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.05 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.27 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.49 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.7 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.72 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.63 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.49 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.31 -60.0 -84.2
+[18:58:04] [Render thread/INFO] (Minecraft) [STDOUT]: -25.12 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.91 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.7 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.49 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.28 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.06 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -23.85 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -23.73 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -23.76 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -23.88 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.04 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.23 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.43 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.63 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -24.84 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -25.06 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -25.27 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -25.49 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -25.7 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -25.92 -60.0 -84.2
+[18:58:05] [Render thread/INFO] (Minecraft) [STDOUT]: -26.03 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -26.1 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -26.04 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -25.9 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -25.73 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -25.54 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -25.34 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -25.13 -60.0 -84.2
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -24.92 -60.0 -84.19
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -24.71 -60.0 -84.19
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -24.49 -60.0 -84.19
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -24.28 -60.0 -84.19
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -24.06 -60.0 -84.19
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -23.85 -60.0 -84.19
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -23.66 -60.0 -84.26
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -23.48 -60.0 -84.37
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -23.29 -60.0 -84.52
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -23.1 -60.0 -84.69
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -22.9 -60.0 -84.87
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -22.79 -60.0 -85.1
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -22.72 -60.0 -85.35
+[18:58:06] [Render thread/INFO] (Minecraft) [STDOUT]: -22.69 -60.0 -85.62
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.67 -60.0 -85.89
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.65 -60.0 -86.17
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.64 -60.0 -86.45
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.64 -59.58 -86.92
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.63 -59.25 -87.21
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.62 -59.0 -87.5
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.62 -58.83 -87.78
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.61 -58.75 -88.07
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.61 -58.75 -88.36
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.6 -58.82 -88.64
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.59 -58.98 -88.93
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.57 -59.2 -89.21
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.52 -59.5 -89.48
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.46 -59.88 -89.72
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.38 -60.0 -89.94
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -22.03 -59.58 -89.96
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -21.82 -59.25 -89.95
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -21.61 -59.0 -89.92
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -21.4 -58.83 -89.88
+[18:58:07] [Render thread/INFO] (Minecraft) [STDOUT]: -21.19 -58.75 -89.83
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -20.98 -58.75 -89.76
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -20.77 -58.82 -89.68
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -20.57 -58.98 -89.59
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -20.36 -59.2 -89.5
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -20.15 -59.5 -89.39
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -19.95 -59.88 -89.27
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -19.74 -60.0 -89.15
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -19.32 -59.58 -88.81
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -19.07 -59.25 -88.6
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -18.83 -59.0 -88.4
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -18.59 -58.83 -88.2
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -18.36 -58.75 -87.99
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -18.13 -58.75 -87.78
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -17.91 -58.82 -87.57
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -17.71 -58.98 -87.35
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -17.52 -59.2 -87.13
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -17.34 -59.5 -86.9
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -17.18 -59.88 -86.66
+[18:58:08] [Render thread/INFO] (Minecraft) [STDOUT]: -17.02 -60.0 -86.43
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.84 -59.58 -85.88
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.74 -59.25 -85.56
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.64 -59.0 -85.25
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.55 -58.83 -84.93
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.46 -58.75 -84.62
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.38 -58.75 -84.31
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.3 -58.82 -84.01
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.23 -58.98 -83.7
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.15 -59.2 -83.4
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -16.07 -59.5 -83.11
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -15.97 -59.88 -82.82
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -15.86 -60.0 -82.55
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -15.46 -59.58 -82.19
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -15.21 -59.25 -81.99
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -14.96 -59.0 -81.8
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -14.71 -58.83 -81.62
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -14.45 -58.75 -81.46
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -14.2 -58.75 -81.31
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -13.94 -58.82 -81.18
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -13.68 -58.98 -81.05
+[18:58:09] [Render thread/INFO] (Minecraft) [STDOUT]: -13.41 -59.2 -80.93
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -13.15 -59.5 -80.83
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -12.88 -59.88 -80.73
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -12.61 -60.0 -80.65
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -12.04 -59.58 -80.58
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -11.7 -59.25 -80.55
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -11.37 -59.0 -80.53
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -11.04 -58.83 -80.5
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -10.72 -58.75 -80.48
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -10.4 -58.75 -80.47
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -10.08 -58.82 -80.45
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -9.77 -58.98 -80.44
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -9.46 -59.2 -80.44
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -9.15 -59.5 -80.43
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -8.84 -59.88 -80.43
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -8.54 -60.0 -80.43
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -7.94 -59.58 -80.44
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -7.58 -59.25 -80.46
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -7.23 -59.0 -80.47
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -6.89 -58.83 -80.48
+[18:58:10] [Render thread/INFO] (Minecraft) [STDOUT]: -6.55 -58.75 -80.49
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -6.25 -58.75 -80.5
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -5.97 -58.82 -80.51
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -5.71 -58.98 -80.52
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -5.48 -59.2 -80.53
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -5.27 -59.5 -80.54
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -5.08 -59.88 -80.55
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.91 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.75 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.66 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.61 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.59 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.57 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.57 -60.0 -80.56
+[18:58:11] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:12] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:13] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:14] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:15] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:16] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:17] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:18] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:19] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:20] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:21] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:22] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:23] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:24] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:25] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:26] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:27] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:28] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:29] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:30] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:31] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:32] [Render thread/INFO] (Minecraft) [STDOUT]: -4.56 -60.0 -80.56
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.55 -60.0 -80.44
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.54 -60.0 -80.24
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.52 -60.0 -80.01
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.5 -60.0 -79.75
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.48 -60.0 -79.49
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.46 -60.0 -79.21
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.44 -60.0 -78.94
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.41 -59.58 -78.46
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.4 -59.25 -78.17
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.38 -59.0 -77.89
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.37 -58.83 -77.6
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.36 -58.75 -77.32
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.34 -58.75 -77.03
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.33 -58.82 -76.75
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.33 -58.98 -76.46
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.33 -59.2 -76.18
+[18:58:33] [Render thread/INFO] (Minecraft) [STDOUT]: -4.34 -59.5 -75.9
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -4.36 -59.88 -75.62
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -4.4 -60.0 -75.35
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -4.66 -59.58 -74.86
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -4.82 -59.25 -74.58
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -4.98 -59.0 -74.3
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -5.15 -58.83 -74.03
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -5.32 -58.75 -73.77
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -5.49 -58.75 -73.51
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -5.66 -58.82 -73.26
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -5.84 -58.98 -73.01
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -6.02 -59.2 -72.77
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -6.2 -59.5 -72.53
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -6.39 -59.88 -72.3
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -6.58 -60.0 -72.07
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -7.01 -59.58 -71.67
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -7.27 -59.25 -71.44
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -7.53 -59.0 -71.22
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -7.8 -58.83 -71.01
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -8.06 -58.75 -70.82
+[18:58:34] [Render thread/INFO] (Minecraft) [STDOUT]: -8.32 -58.75 -70.65
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -8.59 -58.82 -70.49
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -8.86 -58.98 -70.35
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -9.13 -59.2 -70.22
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -9.4 -59.5 -70.11
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -9.67 -59.88 -70.0
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -9.95 -60.0 -69.91
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -10.52 -59.58 -69.84
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -10.86 -59.25 -69.81
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -11.2 -59.0 -69.78
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -11.53 -58.83 -69.75
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -11.85 -58.75 -69.73
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -12.17 -58.75 -69.71
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -12.49 -58.82 -69.7
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -12.8 -58.98 -69.69
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -13.12 -59.2 -69.69
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -13.42 -59.5 -69.7
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -13.72 -59.88 -69.73
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -14.0 -60.0 -69.78
+[18:58:35] [Render thread/INFO] (Minecraft) [STDOUT]: -14.49 -59.58 -70.06
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -14.77 -59.25 -70.23
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -15.04 -59.0 -70.4
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -15.31 -58.83 -70.58
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -15.57 -58.75 -70.76
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -15.82 -58.75 -70.94
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -16.07 -58.82 -71.13
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -16.32 -58.98 -71.31
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -16.57 -59.2 -71.48
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -16.82 -59.5 -71.65
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -17.08 -59.88 -71.81
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -17.33 -60.0 -71.95
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -17.89 -59.58 -72.11
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -18.22 -59.25 -72.2
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -18.55 -59.0 -72.28
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -18.87 -58.83 -72.35
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -19.19 -58.75 -72.42
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -19.51 -58.75 -72.49
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -19.82 -58.82 -72.56
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -20.13 -58.98 -72.63
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -20.43 -59.2 -72.7
+[18:58:36] [Render thread/INFO] (Minecraft) [STDOUT]: -20.73 -59.5 -72.78
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -21.02 -59.88 -72.87
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -21.31 -60.0 -72.96
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -21.84 -59.58 -73.24
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -22.15 -59.25 -73.4
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -22.45 -59.0 -73.57
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -22.74 -58.83 -73.73
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -23.03 -58.75 -73.9
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -23.32 -58.75 -74.06
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -23.6 -58.82 -74.23
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -23.88 -58.98 -74.38
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -24.16 -59.2 -74.54
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -24.43 -59.5 -74.68
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -24.71 -59.88 -74.82
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -24.99 -60.0 -74.94
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -25.57 -59.58 -75.06
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -25.91 -59.25 -75.13
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -26.25 -59.0 -75.19
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -26.58 -58.83 -75.23
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -26.91 -58.75 -75.28
+[18:58:37] [Render thread/INFO] (Minecraft) [STDOUT]: -27.23 -58.75 -75.31
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -27.55 -58.82 -75.34
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -27.87 -58.98 -75.36
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -28.18 -59.2 -75.38
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -28.49 -59.5 -75.39
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -28.8 -59.88 -75.41
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -29.1 -60.0 -75.42
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -29.71 -59.58 -75.43
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -30.07 -59.25 -75.44
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -30.42 -59.0 -75.45
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -30.76 -58.83 -75.46
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -31.1 -58.75 -75.47
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -31.43 -58.75 -75.48
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -31.76 -58.82 -75.49
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -32.08 -58.98 -75.51
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -32.4 -59.2 -75.53
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -32.72 -59.5 -75.55
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -33.03 -59.88 -75.58
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -33.34 -60.0 -75.61
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -33.93 -59.58 -75.73
+[18:58:38] [Render thread/INFO] (Minecraft) [STDOUT]: -34.28 -59.25 -75.8
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -34.63 -59.0 -75.87
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -34.96 -58.83 -75.95
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -35.29 -58.75 -76.03
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -35.61 -58.75 -76.11
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -35.93 -58.82 -76.19
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -36.24 -58.98 -76.28
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -36.55 -59.2 -76.37
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -36.85 -59.5 -76.47
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -37.15 -59.88 -76.56
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -37.44 -60.0 -76.67
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -37.98 -59.58 -76.93
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -38.3 -59.25 -77.09
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -38.61 -59.0 -77.25
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -38.91 -58.83 -77.41
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -39.21 -58.75 -77.57
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -39.5 -58.75 -77.73
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -39.79 -58.82 -77.89
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -40.06 -58.98 -78.06
+[18:58:39] [Render thread/INFO] (Minecraft) [STDOUT]: -40.34 -59.2 -78.22
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -40.6 -59.5 -78.39
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -40.86 -59.88 -78.56
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -41.12 -60.0 -78.74
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -41.58 -59.58 -79.13
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -41.84 -59.25 -79.37
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -42.1 -59.0 -79.6
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -42.36 -58.83 -79.83
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -42.6 -58.75 -80.06
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -42.84 -58.75 -80.29
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -43.08 -58.82 -80.52
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -43.3 -58.98 -80.75
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -43.52 -59.2 -80.98
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -43.74 -59.5 -81.21
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -43.95 -59.88 -81.44
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -44.15 -60.0 -81.67
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -44.5 -59.58 -82.17
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -44.71 -59.25 -82.46
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -44.91 -59.0 -82.75
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -45.1 -58.83 -83.03
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -45.28 -58.75 -83.32
+[18:58:40] [Render thread/INFO] (Minecraft) [STDOUT]: -45.46 -58.75 -83.6
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -45.63 -58.82 -83.87
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -45.8 -58.98 -84.15
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -45.96 -59.2 -84.43
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.11 -59.5 -84.7
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.26 -59.88 -84.98
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.4 -60.0 -85.25
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.62 -59.58 -85.82
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.74 -59.25 -86.15
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.86 -59.0 -86.48
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -46.97 -58.83 -86.8
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.07 -58.75 -87.12
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.17 -58.75 -87.44
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.27 -58.82 -87.75
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.35 -58.98 -88.07
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.44 -59.2 -88.37
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.51 -59.5 -88.68
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.58 -59.88 -88.98
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.65 -60.0 -89.28
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.71 -59.58 -89.89
+[18:58:41] [Render thread/INFO] (Minecraft) [STDOUT]: -47.74 -59.25 -90.24
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.77 -59.0 -90.59
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.8 -58.83 -90.93
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.82 -58.75 -91.27
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.83 -58.75 -91.6
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.85 -58.82 -91.92
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.86 -58.98 -92.25
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.87 -59.2 -92.57
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.87 -59.5 -92.88
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.88 -59.88 -93.2
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.89 -60.0 -93.51
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -47.98 -59.58 -94.11
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.04 -59.25 -94.46
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.1 -59.0 -94.8
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.17 -58.83 -95.14
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.25 -58.75 -95.46
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.33 -58.75 -95.77
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.43 -58.82 -96.08
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.54 -58.98 -96.37
+[18:58:42] [Render thread/INFO] (Minecraft) [STDOUT]: -48.66 -59.2 -96.66
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -48.78 -59.5 -96.94
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -48.89 -59.88 -97.2
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -48.99 -60.0 -97.43
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.08 -60.0 -97.64
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.13 -60.0 -97.75
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.16 -60.0 -97.82
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.17 -60.0 -97.85
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.18 -60.0 -97.87
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.88
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:43] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:44] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:45] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:46] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:47] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:48] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:49] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:50] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:51] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:52] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:53] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:54] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:55] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:56] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:57] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:58] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:58:59] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:00] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:01] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:02] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:03] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:04] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:05] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:06] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:07] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:08] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:09] [Render thread/INFO] (Minecraft) [STDOUT]: -49.19 -60.0 -97.89
+[18:59:09] [Render thread/INFO] (Minecraft) [STDOUT]: -49.24 -60.0 -97.97
+[18:59:09] [Render thread/INFO] (Minecraft) [STDOUT]: -49.32 -60.0 -98.1
+[18:59:09] [Render thread/INFO] (Minecraft) [STDOUT]: -49.43 -60.0 -98.28
+[18:59:09] [Render thread/INFO] (Minecraft) [STDOUT]: -49.55 -60.0 -98.49
+[18:59:09] [Render thread/INFO] (Minecraft) [STDOUT]: -49.69 -60.0 -98.71
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -49.83 -60.0 -98.94
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -49.97 -60.0 -99.17
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.05 -60.0 -99.3
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.09 -60.0 -99.37
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.12 -60.0 -99.41
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.13 -60.0 -99.43
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.13 -60.0 -99.44
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:10] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:11] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:12] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:13] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:14] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:15] [Render thread/INFO] (Minecraft) [STDOUT]: -50.14 -60.0 -99.45
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -50.23 -60.0 -99.54
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -50.38 -60.0 -99.67
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -50.54 -60.0 -99.84
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -50.7 -60.0 -100.04
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -50.86 -60.0 -100.25
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.02 -60.0 -100.47
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.17 -60.0 -100.7
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.32 -60.0 -100.94
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.47 -60.0 -101.17
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.61 -60.0 -101.41
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.75 -60.0 -101.66
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -51.89 -60.0 -101.9
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -52.02 -60.0 -102.15
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -52.16 -60.0 -102.39
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -52.29 -60.0 -102.64
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -52.43 -60.0 -102.88
+[18:59:16] [Render thread/INFO] (Minecraft) [STDOUT]: -52.56 -60.0 -103.13
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -52.7 -60.0 -103.38
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -52.83 -60.0 -103.62
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -52.97 -60.0 -103.87
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.1 -60.0 -104.12
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.23 -60.0 -104.36
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.37 -60.0 -104.61
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.5 -60.0 -104.86
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.63 -60.0 -105.11
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.76 -60.0 -105.35
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -53.89 -60.0 -105.6
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.02 -60.0 -105.85
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.16 -60.0 -106.1
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.29 -60.0 -106.35
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.42 -60.0 -106.59
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.55 -60.0 -106.84
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.68 -60.0 -107.09
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.81 -60.0 -107.34
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -54.94 -60.0 -107.59
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -55.07 -60.0 -107.84
+[18:59:17] [Render thread/INFO] (Minecraft) [STDOUT]: -55.2 -60.0 -108.08
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -55.33 -60.0 -108.33
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -55.47 -60.0 -108.58
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -55.6 -60.0 -108.83
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -55.73 -60.0 -109.08
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -55.86 -60.0 -109.32
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -55.99 -60.0 -109.57
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.12 -60.0 -109.82
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.25 -60.0 -110.07
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.38 -60.0 -110.32
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.51 -60.0 -110.57
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.64 -60.0 -110.81
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.77 -60.0 -111.06
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -56.91 -60.0 -111.31
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.04 -60.0 -111.56
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.17 -60.0 -111.81
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.3 -60.0 -112.05
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.43 -60.0 -112.3
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.56 -60.0 -112.55
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.69 -60.0 -112.8
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.82 -60.0 -113.05
+[18:59:18] [Render thread/INFO] (Minecraft) [STDOUT]: -57.95 -60.0 -113.3
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.08 -60.0 -113.54
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.22 -60.0 -113.79
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.35 -60.0 -114.04
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.48 -60.0 -114.29
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.61 -60.0 -114.54
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.74 -60.0 -114.78
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -58.87 -60.0 -115.03
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.0 -60.0 -115.28
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.13 -60.0 -115.53
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.26 -60.0 -115.78
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.39 -60.0 -116.03
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.53 -60.0 -116.27
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.66 -60.0 -116.52
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.79 -60.0 -116.77
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.92 -60.0 -117.02
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -59.99 -60.0 -117.15
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -60.03 -60.0 -117.23
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -60.05 -60.0 -117.27
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -60.06 -60.0 -117.29
+[18:59:19] [Render thread/INFO] (Minecraft) [STDOUT]: -60.07 -60.0 -117.3
+[18:59:20] [Render thread/INFO] (Minecraft) [STDOUT]: -60.07 -60.0 -117.31
+[18:59:20] [Render thread/INFO] (Minecraft) [STDOUT]: -60.07 -60.0 -117.31
+[18:59:21] [Render thread/INFO] (Minecraft) [STDOUT]: -60.07 -60.0 -117.31
+[18:59:22] [Render thread/INFO] (Minecraft) [STDOUT]: -60.07 -60.0 -117.31
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.98 -60.0 -117.36
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.85 -60.0 -117.43
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.69 -60.0 -117.51
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.52 -60.0 -117.6
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.42 -60.0 -117.65
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.37 -60.0 -117.68
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.34 -60.0 -117.7
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.33 -60.0 -117.7
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.32 -60.0 -117.71
+[18:59:23] [Render thread/INFO] (Minecraft) [STDOUT]: -59.31 -60.0 -117.71
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.31 -60.0 -117.71
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.4 -60.0 -117.66
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.53 -60.0 -117.59
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.61 -60.0 -117.55
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.65 -60.0 -117.53
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.67 -60.0 -117.52
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.68 -60.0 -117.52
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.69 -60.0 -117.51
+[18:59:24] [Render thread/INFO] (Minecraft) [STDOUT]: -59.69 -60.0 -117.51
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -59.57 -60.0 -117.49
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -59.38 -60.0 -117.42
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -59.18 -60.0 -117.31
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -58.96 -60.0 -117.17
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -58.74 -60.0 -117.03
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -58.51 -60.0 -116.88
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -58.28 -60.0 -116.73
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -58.05 -60.0 -116.57
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -57.66 -59.58 -116.3
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -57.42 -59.25 -116.14
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -57.18 -59.0 -115.98
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -56.95 -58.83 -115.81
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -56.71 -58.75 -115.65
+[18:59:25] [Render thread/INFO] (Minecraft) [STDOUT]: -56.48 -58.75 -115.49
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -56.24 -58.82 -115.33
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -56.0 -58.98 -115.17
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -55.77 -59.2 -115.0
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -55.54 -59.5 -114.84
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -55.3 -59.88 -114.68
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -55.07 -60.0 -114.52
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -54.59 -59.58 -114.18
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -54.3 -59.25 -113.99
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -54.02 -59.0 -113.79
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -53.75 -58.83 -113.6
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -53.48 -58.75 -113.41
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -53.21 -58.75 -113.22
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -52.95 -58.82 -113.04
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -52.68 -58.98 -112.86
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -52.43 -59.2 -112.68
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -52.17 -59.5 -112.5
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -51.92 -59.88 -112.32
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -51.66 -60.0 -112.15
+[18:59:26] [Render thread/INFO] (Minecraft) [STDOUT]: -51.17 -59.58 -111.8
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -50.87 -59.25 -111.59
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -50.59 -59.0 -111.39
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -50.3 -58.83 -111.19
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -50.03 -58.75 -111.0
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -49.75 -58.75 -110.81
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -49.48 -58.82 -110.62
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -49.22 -58.98 -110.43
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -48.95 -59.2 -110.25
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -48.69 -59.5 -110.07
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -48.44 -59.88 -109.89
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -48.18 -60.0 -109.71
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -47.68 -59.58 -109.35
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -47.39 -59.25 -109.15
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -47.1 -59.0 -108.94
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -46.82 -58.83 -108.74
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -46.55 -58.75 -108.54
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -46.28 -58.75 -108.34
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -46.01 -58.82 -108.14
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -45.76 -58.98 -107.94
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -45.5 -59.2 -107.74
+[18:59:27] [Render thread/INFO] (Minecraft) [STDOUT]: -45.26 -59.5 -107.54
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -45.02 -59.88 -107.34
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.8 -60.0 -107.15
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.6 -60.0 -106.99
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.49 -60.0 -106.9
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.43 -60.0 -106.85
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.4 -60.0 -106.82
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.38 -60.0 -106.8
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.37 -60.0 -106.8
+[18:59:28] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[18:59:29] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[18:59:30] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[18:59:31] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[18:59:32] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[18:59:33] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[18:59:34] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[18:59:34] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:overworld
+[18:59:34] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_end
+[18:59:34] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_nether
+[18:59:59] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:00] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:01] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:02] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:03] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:04] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:05] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:06] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:07] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:08] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:09] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:10] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:11] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:12] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:13] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:14] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:15] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:16] [Render thread/INFO] (Minecraft) [STDOUT]: -44.36 -60.0 -106.79
+[19:00:16] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[19:00:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:overworld
+[19:00:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_end
+[19:00:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_nether
+[19:00:17] [Render thread/INFO] (Meteor Client) Saving
+[19:00:17] [Render thread/INFO] (Meteor Client) Saved in 59 milliseconds.
+[19:00:17] [Server thread/INFO] (Minecraft) Player805 lost connection: Disconnected
+[19:00:17] [Server thread/INFO] (Minecraft) Player805 left the game
+[19:00:17] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[19:00:17] [Server thread/INFO] (Minecraft) Stopping server
+[19:00:17] [Server thread/INFO] (Minecraft) Saving players
+[19:00:17] [Server thread/INFO] (Minecraft) Saving worlds
+[19:00:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:overworld
+[19:00:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_end
+[19:00:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[1]'/minecraft:the_nether
+[19:00:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (1): All chunks are saved
+[19:00:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:00:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:00:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[19:00:19] [Render thread/INFO] (Minecraft) Stopping!
+[19:00:19] [Thread-5/INFO] (Meteor Client) Saving
