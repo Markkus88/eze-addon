@@ -6,6 +6,7 @@ import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.mixin.CustomPayloadC2SPacketAccessor;
 import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.StringSetting;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
@@ -21,8 +22,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import org.apache.commons.lang3.StringUtils;
-
-import ARm8.addon.Addon;
 
 import java.nio.charset.StandardCharsets;
 
@@ -44,7 +43,7 @@ public class ServerSpoof extends Module {
 	);
 
 	public ServerSpoof() {
-		super(Addon.MISC, "server-spoof+", "Spoof client brand and/or resource pack.");
+		super(Categories.Misc, "server-spoof+", "Spoof client brand and/or resource pack.");
 
 		MeteorClient.EVENT_BUS.subscribe(new Listener());
 	}

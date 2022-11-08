@@ -9,9 +9,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkSectionPos;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.chunk.Chunk;
-import ARm8.addon.modules.misc.XrayBruteforce;
 
 import java.util.List;
+
+import ARm8.addon.modules.render.XrayBruteforce;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 import static meteordevelopment.meteorclient.utils.Utils.getRenderDistance;

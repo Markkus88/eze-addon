@@ -1,12 +1,12 @@
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
 import ARm8.addon.utils.entity.ezeEntityUtils;
 import ARm8.addon.utils.player.ezePlayerUtils;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.entity.EntityUtils;
 import meteordevelopment.meteorclient.utils.entity.SortPriority;
@@ -141,7 +141,7 @@ public class AntiSurround extends Module {
     private int delay;
 
     public AntiSurround() {
-        super(Addon.COMBAT, "anti-surround", "Place items inside the enemy's surround to break it.");
+        super(Categories.Combat, "anti-surround", "Place items inside the enemy's surround to break it.");
     }
 
     @Override

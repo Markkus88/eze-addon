@@ -1,11 +1,11 @@
 package ARm8.addon.modules.misc;
 
-import ARm8.addon.Addon;
 import ARm8.addon.events.CustomPayloadEvent;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.orbit.EventHandler;
@@ -40,7 +40,7 @@ public class CustomPackets extends Module {
     );
 
     public CustomPackets() {
-        super(Addon.MISC, "custom-packets", "Handles different non-vanilla protocols.");
+        super(Categories.Misc, "custom-packets", "Handles different non-vanilla protocols.");
     }
 
     @EventHandler

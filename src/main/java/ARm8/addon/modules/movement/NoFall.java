@@ -1,6 +1,5 @@
 package ARm8.addon.modules.movement;
 
-import ARm8.addon.Addon;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.mixin.PlayerMoveC2SPacketAccessor;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
@@ -8,6 +7,7 @@ import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.EnumSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.Packet;
@@ -15,7 +15,7 @@ import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 
 public class NoFall extends Module {
 	public NoFall() {
-		super(Addon.MOVEMENT, "no-fall+", "Prevent you from fall damage.");
+		super(Categories.Movement, "no-fall+", "Prevent you from fall damage.");
 	}
 	private final SettingGroup sgGeneral = settings.getDefaultGroup();
 

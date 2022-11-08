@@ -1,6 +1,5 @@
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
 import baritone.api.BaritoneAPI;
 import ARm8.addon.utils.misc.TimerUtils;
 import ARm8.addon.utils.player.ezePlayerUtils;
@@ -10,6 +9,7 @@ import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.entity.SortPriority;
 import meteordevelopment.meteorclient.utils.entity.Target;
@@ -240,7 +240,7 @@ public class KillAura extends Module {
 
 
     public KillAura() {
-        super(Addon.COMBAT, "kill-aura+", "Kill Aura with various improvements.");
+        super(Categories.Combat, "kill-aura+", "Kill Aura with various improvements.");
     }
 
 

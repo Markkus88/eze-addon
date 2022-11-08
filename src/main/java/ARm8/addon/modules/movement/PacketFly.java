@@ -7,6 +7,7 @@ import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixin.PlayerPositionLookS2CPacketAccessor;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
@@ -25,8 +26,6 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-
-import ARm8.addon.Addon;
 
 public class PacketFly extends Module {
     private final SettingGroup sgBounds = settings.createGroup("Bounds");
@@ -385,7 +384,7 @@ public class PacketFly extends Module {
     // Constructor
 
     public PacketFly() {
-        super(Addon.MOVEMENT, "packet-fly", "Bypasses the servers anti-cheat to allow you to fly.");
+        super(Categories.Movement, "packet-fly", "Bypasses the servers anti-cheat to allow you to fly.");
     }
 
     // Activation

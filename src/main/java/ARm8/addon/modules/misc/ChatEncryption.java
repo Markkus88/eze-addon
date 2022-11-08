@@ -1,11 +1,11 @@
 package ARm8.addon.modules.misc;
 
-import ARm8.addon.Addon;
 import ARm8.addon.events.SendRawMessageEvent;
 import ARm8.addon.utils.player.ChatHelper;
 import meteordevelopment.meteorclient.events.game.ReceiveMessageEvent;
 import meteordevelopment.meteorclient.events.game.SendMessageEvent;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.render.color.SettingColor;
 import meteordevelopment.orbit.EventHandler;
@@ -39,7 +39,7 @@ public class ChatEncryption extends Module {
     );
 
     private final Setting<String> decryptionPrefix = sgGeneral.add(new StringSetting.Builder()
-        .name("encryption-prefix")
+        .name("decryption-prefix")
         .description("What is used as prefix to decrypt messages.")
         .defaultValue("!dnc:")
         .build()
@@ -70,7 +70,7 @@ public class ChatEncryption extends Module {
         .build());
 
     public ChatEncryption() {
-        super(Addon.MISC, "chat-encryption", "Encrypts your chat messages to make them unreadable to other people.");
+        super(Categories.Misc, "chat-encryption", "Encrypts your chat messages to make them unreadable to other people.");
     }
 
     @EventHandler

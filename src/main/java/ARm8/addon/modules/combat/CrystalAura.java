@@ -5,7 +5,6 @@ https://github.com/MeteorDevelopment/meteor-client/blob/master/src/main/java/met
 
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
 import ARm8.addon.utils.misc.CrystalUtils;
 import ARm8.addon.utils.misc.TimerUtils;
 import ARm8.addon.utils.misc.ezeDamageUtils;
@@ -26,6 +25,7 @@ import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.renderer.text.TextRenderer;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.entity.EntityUtils;
 import meteordevelopment.meteorclient.utils.entity.Target;
@@ -992,7 +992,7 @@ public class CrystalAura extends Module {
 
 
     public CrystalAura() {
-        super(Addon.COMBAT, "crystal-aura+", "Automatically places and attacks crystals.");
+        super(Categories.Combat, "crystal-aura+", "Automatically places and attacks crystals.");
     }
 
 

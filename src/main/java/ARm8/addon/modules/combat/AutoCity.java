@@ -1,13 +1,13 @@
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
-import ARm8.addon.modules.misc.InstaMine;
+import ARm8.addon.modules.player.InstaMine;
 import ARm8.addon.utils.entity.ezeEntityUtils;
 import ARm8.addon.utils.player.ezePlayerUtils;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.utils.entity.EntityUtils;
@@ -220,7 +220,7 @@ public class AutoCity extends Module {
 
 
     public AutoCity() {
-        super(Addon.COMBAT, "auto-city+", "Automatically mine a target's surround.");
+        super(Categories.Combat, "auto-city+", "Automatically mine a target's surround.");
     }
 
 

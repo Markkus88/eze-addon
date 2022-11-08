@@ -7,11 +7,12 @@ import meteordevelopment.meteorclient.systems.modules.render.search.SBlockData;
 import meteordevelopment.meteorclient.utils.misc.UnorderedArrayList;
 import meteordevelopment.meteorclient.utils.render.RenderUtils;
 import net.minecraft.block.Block;
-import ARm8.addon.modules.misc.XrayBruteforce;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Set;
+
+import ARm8.addon.modules.render.XrayBruteforce;
 
 public class XGroup {
 	private static final XrayBruteforce search = Modules.get().get(XrayBruteforce.class);

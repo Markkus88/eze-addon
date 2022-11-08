@@ -5,14 +5,13 @@ import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.settings.StringListSetting;
 import meteordevelopment.meteorclient.settings.StringSetting;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.network.PlayerListEntry;
 
 import java.util.List;
-
-import ARm8.addon.Addon;
 
 public class GroupChat extends Module {
     final SettingGroup sgGeneral = settings.getDefaultGroup();
@@ -31,7 +30,7 @@ public class GroupChat extends Module {
     );
 
     public GroupChat() {
-        super(Addon.MISC, "group-chat", "Talk with people privately with /msg.");
+        super(Categories.Misc, "group-chat", "Talk with people privately with /msg.");
     }
 
     @EventHandler

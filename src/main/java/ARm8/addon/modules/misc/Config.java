@@ -1,6 +1,6 @@
 package ARm8.addon.modules.misc;
 
-import ARm8.addon.Addon;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.settings.BoolSetting;
@@ -22,7 +22,7 @@ public class Config extends Module {
     private final Setting<ChatFormatting> formattingMode = sgChat.add(new EnumSetting.Builder<ChatFormatting>().name("mode").description("The style of messages.").defaultValue(ChatFormatting.Bold).visible(chatFormatting::get).build());
 
     public Config() {
-        super(Addon.MISC, "config", "Configuration of eze");
+        super(Categories.Misc, "config", "Configuration of eze");
     }
 
     @Override

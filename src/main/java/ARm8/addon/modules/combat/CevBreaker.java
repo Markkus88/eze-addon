@@ -1,12 +1,12 @@
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
 import ARm8.addon.utils.entity.ezeEntityUtils;
 import ARm8.addon.utils.world.WorldUtils;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.friends.Friends;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.utils.player.DamageUtils;
@@ -192,7 +192,7 @@ public class CevBreaker extends Module {
 
 
     public CevBreaker() {
-        super(Addon.COMBAT, "cev-breaker", "Break crystals over a ppl's head to deal massive damage!");
+        super(Categories.Combat, "cev-breaker", "Break crystals over a ppl's head to deal massive damage!");
     }
 
 

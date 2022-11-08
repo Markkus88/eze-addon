@@ -1,11 +1,11 @@
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
 import ARm8.addon.events.BlockUpdateEvent;
 import ARm8.addon.utils.misc.SurroundUtils;
 import ARm8.addon.utils.misc.TimerUtils;
 import ARm8.addon.utils.world.BlockPosX;
 import ARm8.addon.utils.world.Place;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -65,7 +65,7 @@ public class Surround extends Module {
     private int interval;
 
     public Surround() {
-        super(Addon.COMBAT, "surround+", "Surrounds you in blocks to prevent massive crystal damage.");
+        super(Categories.Combat, "surround+", "Surrounds you in blocks to prevent massive crystal damage.");
     }
 
     @Override

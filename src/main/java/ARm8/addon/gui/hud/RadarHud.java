@@ -3,7 +3,6 @@ package ARm8.addon.gui.hud;
 import java.util.Iterator;
 
 import ARm8.addon.Addon;
-import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

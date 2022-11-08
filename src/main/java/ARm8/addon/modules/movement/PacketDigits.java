@@ -1,9 +1,10 @@
 package ARm8.addon.modules.movement;
 
-import ARm8.addon.Addon;
+import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.IntSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 
 public class PacketDigits extends Module {
@@ -19,14 +20,25 @@ public class PacketDigits extends Module {
             .build()
     );
 
+    private final Setting<Boolean> shouldModifyY = sgGeneral.add(new BoolSetting.Builder()
+            .name("modify y-position")
+            .description("whether or not to modify the y-position.")
+            .defaultValue(false)
+            .build()
+    );
+
     // Constructor
 
     public PacketDigits() {
-        super(Addon.MOVEMENT, "packet-digits", "Removes digits from your movement packets to make them smaller.");
+        super(Categories.Movement, "packet-digits", "Removes digits from your movement packets to make them smaller.");
     }
 
     public double round(double value) {
         int digit = (int) Math.pow(10, digits.get());
         return ((double) (Math.round(value * digit)) / digit);
+    }
+
+    public boolean shouldModifyY() {
+        return shouldModifyY.get();
     }
 }

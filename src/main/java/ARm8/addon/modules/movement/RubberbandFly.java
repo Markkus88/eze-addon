@@ -1,6 +1,5 @@
 package ARm8.addon.modules.movement;
 
-import ARm8.addon.Addon;
 import ARm8.addon.utils.misc.RubberbandFlyUtils;
 import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
@@ -9,6 +8,7 @@ import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.mixin.PlayerPositionLookS2CPacketAccessor;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
@@ -472,7 +472,7 @@ public class RubberbandFly extends Module {
     private List<TeleportConfirmC2SPacket> tpPackets;
 
     public RubberbandFly() {
-        super(Addon.MOVEMENT, "rubberband-fly", "Fly with rubberbanding.");
+        super(Categories.Movement, "rubberband-fly", "Fly with rubberbanding.");
     }
 
     @Override

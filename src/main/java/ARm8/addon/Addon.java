@@ -16,12 +16,22 @@ import ARm8.addon.modules.combat.*;
 import ARm8.addon.modules.exploits.*;
 import ARm8.addon.modules.misc.*;
 import ARm8.addon.modules.movement.*;
+import ARm8.addon.modules.player.AutoCraft;
+import ARm8.addon.modules.player.AutoSpectre;
+import ARm8.addon.modules.player.InstaMine;
+import ARm8.addon.modules.player.MultiTask;
+import ARm8.addon.modules.render.AntiScreen;
+import ARm8.addon.modules.render.NewChunks;
+import ARm8.addon.modules.render.OreSim;
+import ARm8.addon.modules.render.SkeletonESP;
+import ARm8.addon.modules.render.XrayBruteforce;
+import ARm8.addon.modules.world.CoordLogger;
+import ARm8.addon.modules.world.NoCollision;
+import ARm8.addon.modules.world.NoWorldBorder;
+import ARm8.addon.modules.world.PacketPlace;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LoggerFactory.getLogger("eze-addon");
-    public static final Category COMBAT = new Category("eze Combat");
-    public static final Category MOVEMENT = new Category("eze Movement");
-    public static final Category MISC = new Category("eze Misc");
     public static final Category EXPLOITS = new Category("Exploits");
     
     public static final HudGroup HUD_GROUP = new HudGroup("eze");
@@ -51,7 +61,6 @@ public class Addon extends MeteorAddon {
 
         //Combat
 
-        Modules.get().add(new Anchor());
         Modules.get().add(new AntiSurround());
         Modules.get().add(new AutoCity());
         Modules.get().add(new CevBreaker());
@@ -59,42 +68,55 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new KillAura());
         Modules.get().add(new SmartHoleFill());
         Modules.get().add(new Surround());
-        Modules.get().add(new XPThrower());
 
         //Misc
 
-        Modules.get().add(new AntiScreen());
-        Modules.get().add(new AutoCraft());
-        Modules.get().add(new AutoSpectre());
         Modules.get().add(new ChatEncryption());
         Modules.get().add(new Config());
         Modules.get().add(new CoordLogger());
         Modules.get().add(new CustomPackets());
         Modules.get().add(new GroupChat());
-        Modules.get().add(new InstaMine());
-        Modules.get().add(new MultiTask());
-        Modules.get().add(new NewChunks());
-        Modules.get().add(new NoCollision());
-        Modules.get().add(new OreSim());
-        Modules.get().add(new PacketPlace());
-        Modules.get().add(new PortalGodMode());
         Modules.get().add(new ServerSpoof());
-        Modules.get().add(new SkeletonESP());
         Modules.get().add(new TPSSync());
-        Modules.get().add(new XrayBruteforce());
 
         //Movement
 
+        Modules.get().add(new Anchor());
         Modules.get().add(new EntityFly());
         Modules.get().add(new EntityPhase());
+        Modules.get().add(new Flight());
         Modules.get().add(new NoFall());
         Modules.get().add(new PacketDigits());
         Modules.get().add(new PacketFly());
         Modules.get().add(new RubberbandFly());
+        Modules.get().add(new WorldGuardBypass());
+
+        //Player
+
+        Modules.get().add(new AutoCraft());
+        Modules.get().add(new AutoSpectre());
+        Modules.get().add(new InstaMine());
+        Modules.get().add(new MultiTask());
+
+        //Render
+        
+        Modules.get().add(new AntiScreen());
+        Modules.get().add(new NewChunks());
+        Modules.get().add(new OreSim());
+        Modules.get().add(new SkeletonESP());
+        Modules.get().add(new XrayBruteforce());
+
+        //World
+
+        Modules.get().add(new CoordLogger());
+        Modules.get().add(new NoCollision());
+        Modules.get().add(new NoWorldBorder());
+        Modules.get().add(new PacketPlace());
 
         //Exploits
 
         Modules.get().add(new AACCrash());
+        Modules.get().add(new BoatExecute());
         Modules.get().add(new BookCrash());
         Modules.get().add(new ContainerCrash());
         Modules.get().add(new CraftingCrash());
@@ -106,19 +128,18 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new MessageLagger());
         Modules.get().add(new MovementCrash());
         Modules.get().add(new PacketSpammer());
+        Modules.get().add(new PortalGodMode());
         Modules.get().add(new SequenceCrash());
 
         //HUD 
 
         Hud.get().register(ItemCounter.INFO);
         Hud.get().register(Logo.INFO);
+        Hud.get().register(RadarHud.INFO);
     }
 
     @Override
     public void onRegisterCategories() {
-        Modules.registerCategory(COMBAT);
-        Modules.registerCategory(MOVEMENT);
-        Modules.registerCategory(MISC);
         Modules.registerCategory(EXPLOITS);
     }
 

@@ -2,10 +2,14 @@ package ARm8.addon.mixins;
 
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketCallbacks;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
+import net.minecraft.network.packet.c2s.play.VehicleMoveC2SPacket;
+
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -34,7 +38,7 @@ public abstract class ClientConnectionMixin {
             if (packet instanceof PlayerMoveC2SPacket.PositionAndOnGround move) {
                 PlayerMoveC2SPacket.PositionAndOnGround modified = new PlayerMoveC2SPacket.PositionAndOnGround(
                         digits.round(move.getX(0)),
-                        digits.round(move.getY(0)),
+                        digits.shouldModifyY() ? digits.round(move.getY(0)) : move.getY(0),
                         digits.round(move.getZ(0)),
 
                         move.isOnGround()
@@ -51,13 +55,37 @@ public abstract class ClientConnectionMixin {
             } else if (packet instanceof PlayerMoveC2SPacket.Full move) {
                 PlayerMoveC2SPacket.Full modified = new PlayerMoveC2SPacket.Full(
                         digits.round(move.getX(0)),
-                        digits.round(move.getY(0)),
+                        digits.shouldModifyY() ? digits.round(move.getY(0)) : move.getY(0),
                         digits.round(move.getZ(0)),
 
                         move.getYaw(mc.player.getYaw()),
                         move.getPitch(mc.player.getPitch()),
                         move.isOnGround()
                 );
+
+                info.cancel();
+
+                if (this.isOpen()) {
+                    this.sendQueuedPackets();
+                    this.sendImmediately(modified, callbacks);
+                } else {
+                    this.packetQueue.add(new ClientConnection.QueuedPacket(modified, callbacks));
+                }
+            }
+
+            if (packet instanceof VehicleMoveC2SPacket move) {
+                BoatEntity entity = new BoatEntity(EntityType.BOAT, mc.world);
+
+                entity.setPos(
+                        digits.round(move.getX()),
+                        digits.shouldModifyY() ? digits.round(move.getY()) : move.getY(),
+                        digits.round(move.getZ())
+                );
+
+                entity.setYaw(move.getYaw());
+                entity.setPitch(move.getPitch());
+
+                VehicleMoveC2SPacket modified = new VehicleMoveC2SPacket(entity);
 
                 info.cancel();
 

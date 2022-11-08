@@ -1,6 +1,5 @@
 package ARm8.addon.mixins;
 
-import ARm8.addon.modules.misc.NoCollision;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -9,6 +8,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import ARm8.addon.modules.world.NoCollision;
 
 @Mixin(WorldBorder.class)
 public class WorldBorderMixin {

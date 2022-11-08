@@ -202,7 +202,7 @@ public class ServerFinderScreen extends WindowScreen implements IServerFinderDon
         stateLabel.set(state.toString());
         checkedLabel.set("Checked: " + checked + " / " + targetChecked);
         workingLabel.set("Working: " + working);
-        scannedIpsLabel.set("Scanned IP: " + (ipsToPing.size() > 0 ? ipsToPing.peek() : "N/A"));
+        scannedIpsLabel.set("Currently scanning: " + (ipsToPing.size() > 0 ? ipsToPing.peek() : "N/A"));
         searchButton.visible = !ipBox.get().isEmpty();
     }
 

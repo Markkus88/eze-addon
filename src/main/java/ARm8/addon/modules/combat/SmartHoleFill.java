@@ -1,12 +1,12 @@
 package ARm8.addon.modules.combat;
 
-import ARm8.addon.Addon;
 import ARm8.addon.utils.player.Interactions;
 import ARm8.addon.utils.world.BlockHelper;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.entity.EntityUtils;
 import meteordevelopment.meteorclient.utils.entity.SortPriority;
@@ -63,7 +63,7 @@ public class SmartHoleFill extends Module {
     public final Setting<SettingColor> lineColor = sgRender.add(new ColorSetting.Builder().name("line-color").defaultValue(new SettingColor(114, 11, 135)).build());
 
     public SmartHoleFill() {
-        super(Addon.COMBAT, "smart-hole-fill", "Smart Hole Filler.");
+        super(Categories.Combat, "smart-hole-fill", "Smart Hole Filler.");
     }
 
     private int delayTimer = 0;

@@ -12,11 +12,6 @@
     "ARm8/addon/mixins/WorldBorderMixin": {
       "asVoxelShape": "Lnet/minecraft/class_2784;method_17903()Lnet/minecraft/class_265;"
     },
-    "ARm8/addon/mixins/VehicleMoveC2SPacketAccessor": {
-      "x": "field_12899:D",
-      "y": "field_12897:D",
-      "z": "field_12895:D"
-    },
     "ARm8/addon/mixins/MinecraftClientMixin": {
       "doItemUse": "Lnet/minecraft/class_310;method_1583()V",
       "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z": "Lnet/minecraft/class_746;method_6115()Z",
@@ -43,11 +38,6 @@
       },
       "ARm8/addon/mixins/WorldBorderMixin": {
         "asVoxelShape": "Lnet/minecraft/class_2784;method_17903()Lnet/minecraft/class_265;"
-      },
-      "ARm8/addon/mixins/VehicleMoveC2SPacketAccessor": {
-        "x": "field_12899:D",
-        "y": "field_12897:D",
-        "z": "field_12895:D"
       },
       "ARm8/addon/mixins/MinecraftClientMixin": {
         "doItemUse": "Lnet/minecraft/class_310;method_1583()V",

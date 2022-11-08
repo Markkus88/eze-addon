@@ -10,9 +10,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
-import ARm8.addon.modules.misc.XrayBruteforce;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
+
+import ARm8.addon.modules.render.XrayBruteforce;
 
 public class XBlock {
 	private static final BlockPos.Mutable blockPos = new BlockPos.Mutable();

@@ -1,11 +1,11 @@
 package ARm8.addon.modules.movement;
 
-import ARm8.addon.Addon;
 import meteordevelopment.meteorclient.events.entity.LivingEntityMoveEvent;
 import meteordevelopment.meteorclient.mixininterface.IVec3d;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
+import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.PlayerUtils;
 import meteordevelopment.orbit.EventHandler;
@@ -41,7 +41,7 @@ public class EntityFly extends Module {
     );
 
     public EntityFly() {
-        super(Addon.MOVEMENT, "entity-fly", "Allows you to fly with any entity.");
+        super(Categories.Movement, "entity-fly", "Allows you to fly with any entity.");
     }
 
     @EventHandler
