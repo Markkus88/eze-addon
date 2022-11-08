@@ -135,7 +135,6 @@ public class Addon extends MeteorAddon {
 
         Hud.get().register(ItemCounter.INFO);
         Hud.get().register(Logo.INFO);
-        Hud.get().register(RadarHud.INFO);
     }
 
     @Override
