@@ -76,6 +76,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new CoordLogger());
         Modules.get().add(new CustomPackets());
         Modules.get().add(new GroupChat());
+        Modules.get().add(new Placeholders());
         Modules.get().add(new ServerSpoof());
         Modules.get().add(new TPSSync());
 
@@ -133,6 +134,7 @@ public class Addon extends MeteorAddon {
 
         //HUD 
 
+        Hud.get().register(BindsHud.INFO);
         Hud.get().register(ItemCounter.INFO);
         Hud.get().register(Logo.INFO);
     }
