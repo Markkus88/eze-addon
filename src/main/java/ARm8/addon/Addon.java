@@ -16,19 +16,9 @@ import ARm8.addon.modules.combat.*;
 import ARm8.addon.modules.exploits.*;
 import ARm8.addon.modules.misc.*;
 import ARm8.addon.modules.movement.*;
-import ARm8.addon.modules.player.AutoCraft;
-import ARm8.addon.modules.player.AutoSpectre;
-import ARm8.addon.modules.player.InstaMine;
-import ARm8.addon.modules.player.MultiTask;
-import ARm8.addon.modules.render.AntiScreen;
-import ARm8.addon.modules.render.NewChunks;
-import ARm8.addon.modules.render.OreSim;
-import ARm8.addon.modules.render.SkeletonESP;
-import ARm8.addon.modules.render.XrayBruteforce;
-import ARm8.addon.modules.world.CoordLogger;
-import ARm8.addon.modules.world.NoCollision;
-import ARm8.addon.modules.world.NoWorldBorder;
-import ARm8.addon.modules.world.PacketPlace;
+import ARm8.addon.modules.player.*;
+import ARm8.addon.modules.render.*;
+import ARm8.addon.modules.world.*;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LoggerFactory.getLogger("eze-addon");
