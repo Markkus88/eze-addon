@@ -48,7 +48,7 @@ public class SkeletonESP extends Module {
     private final Freecam freecam;
 
     public SkeletonESP() {
-        super(Categories.Render, "skeleton-esp", "Looks cool as fuck");
+        super(Categories.Render, "skeleton-esp", "Render skeletons of other players.");
         freecam = Modules.get().get(Freecam.class);
     }
 
