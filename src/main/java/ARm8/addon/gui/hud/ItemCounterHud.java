@@ -17,8 +17,8 @@ import meteordevelopment.meteorclient.settings.SettingGroup;
 
 import java.util.*;
 
-public class ItemCounter extends HudElement {
-    public static final HudElementInfo<ItemCounter> INFO = new HudElementInfo<>(Addon.HUD_GROUP, "item-counter", "Shows you the number of items you have in your inventory.", ItemCounter::new);
+public class ItemCounterHud extends HudElement {
+    public static final HudElementInfo<ItemCounterHud> INFO = new HudElementInfo<>(Addon.HUD_GROUP, "item-counter", "Shows you the number of items you have in your inventory.", ItemCounterHud::new);
 
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
     private final SettingGroup sgRender = settings.createGroup("Render");
@@ -79,7 +79,7 @@ public class ItemCounter extends HudElement {
 
     
 
-    public ItemCounter() {
+    public ItemCounterHud() {
         super(INFO);
     }
 

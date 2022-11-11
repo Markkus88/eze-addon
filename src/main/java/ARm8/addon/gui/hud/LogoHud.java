@@ -8,8 +8,8 @@ import meteordevelopment.meteorclient.systems.hud.HudRenderer;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.util.Identifier;
 
-public class Logo extends HudElement {
-    public static final HudElementInfo<Logo> INFO = new HudElementInfo<>(Addon.HUD_GROUP, "logo-hud", "Display the eze logo.", Logo::new);
+public class LogoHud extends HudElement {
+    public static final HudElementInfo<LogoHud> INFO = new HudElementInfo<>(Addon.HUD_GROUP, "logo-hud", "Display the eze logo.", LogoHud::new);
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
 	private final Setting<Double> scale = sgGeneral.add(new DoubleSetting.Builder()
@@ -32,7 +32,7 @@ public class Logo extends HudElement {
 	private final Identifier TEXTURE = new Identifier("eze", "icon.png");
 
 
-	public Logo() {
+	public LogoHud() {
 		super(INFO);
 		calculateSize();
 	}

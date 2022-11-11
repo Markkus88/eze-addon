@@ -33,6 +33,7 @@ public class Addon extends MeteorAddon {
         //Commands
         
         Commands.get().add(new AutoVClipCommand());
+        Commands.get().add(new BloatCommand());
         Commands.get().add(new CenterCommand());
         Commands.get().add(new ClearChatCommand());
         Commands.get().add(new CrashItemCommand());
@@ -42,7 +43,9 @@ public class Addon extends MeteorAddon {
         Commands.get().add(new ExportCommand());
         Commands.get().add(new ExportTerrainCommand());
         Commands.get().add(new GhostCommand());
+        Commands.get().add(new HideCommand());
         Commands.get().add(new ReloadBlocksCommand());
+        Commands.get().add(new RenameCommand());
         Commands.get().add(new SeedCommand());
         Commands.get().add(new ServerCommand());
         Commands.get().add(new SleepCommand());
@@ -73,6 +76,7 @@ public class Addon extends MeteorAddon {
         //Movement
 
         Modules.get().add(new Anchor());
+        Modules.get().add(new BedrockWalk());
         Modules.get().add(new EntityFly());
         Modules.get().add(new EntityPhase());
         Modules.get().add(new Flight());
@@ -107,8 +111,12 @@ public class Addon extends MeteorAddon {
         //Exploits
 
         Modules.get().add(new AACCrash());
+        Modules.get().add(new BoatCrash());
         Modules.get().add(new BoatExecute());
         Modules.get().add(new BookCrash());
+        Modules.get().add(new BowBomb());
+        Modules.get().add(new ChunkCrash());
+        Modules.get().add(new ConsoleFlood());
         Modules.get().add(new ContainerCrash());
         Modules.get().add(new CraftingCrash());
         Modules.get().add(new CreativeCrash());
@@ -125,8 +133,8 @@ public class Addon extends MeteorAddon {
         //HUD 
 
         Hud.get().register(BindsHud.INFO);
-        Hud.get().register(ItemCounter.INFO);
-        Hud.get().register(Logo.INFO);
+        Hud.get().register(ItemCounterHud.INFO);
+        Hud.get().register(LogoHud.INFO);
     }
 
     @Override
