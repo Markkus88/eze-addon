@@ -57,6 +57,13 @@ public class CoordLogger extends Module {
             .build()
     );
 
+    private final Setting<Boolean> cats = sgTeleports.add(new BoolSetting.Builder()
+            .name("cats")
+            .description("Logs cat teleports.")
+            .defaultValue(false)
+            .build()
+    );
+
     // World events
     
     private final Setting<Boolean> enderDragons = sgWorldEvents.add(new BoolSetting.Builder()
@@ -120,6 +127,15 @@ public class CoordLogger extends Module {
                     
                     if (ownerUuid != null && wolfPosition.distanceTo(packetPosition) >= minDistance.get()) {
                         info(formatMessage("Wolf has teleported to ", packetPosition));
+                    }
+                } else if (entity.getType().equals(EntityType.CAT) && cats.get()) {
+                    Vec3d packetPosition = new Vec3d(packet.getX(), packet.getY(), packet.getZ());
+                    Vec3d catPosition = entity.getPos();
+                    
+                    UUID ownerUuid = ((TameableEntity) entity).getOwnerUuid();
+                    
+                    if (ownerUuid != null && catPosition.distanceTo(packetPosition) >= minDistance.get()) {
+                        info(formatMessage("Cat has teleported to ", packetPosition));
                     }
                 }
             } catch(NullPointerException ignored) {}

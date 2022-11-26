@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 @Mixin(value = MinecraftClient.class, priority = 999)
 public class MinecraftClientMixin {
     @Shadow
-    public @Nullable ClientPlayerEntity player;
+    public ClientPlayerEntity player;
     @Shadow
     @Final
     public GameOptions options;
@@ -62,9 +62,6 @@ public class MinecraftClientMixin {
         return cpim.isBreakingBlock();
     }
 
-
-
-
     @Redirect(method = "handleInputEvents", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z"), require = 0)
     public boolean attackCheck(ClientPlayerEntity instance) {
         MultiTask multi = Modules.get().get(MultiTask.class);
@@ -80,7 +77,6 @@ public class MinecraftClientMixin {
         }
         return player.isUsingItem();
     }
-
 
     @Redirect(method = "doAttack", at = @At(value = "INVOKE", target = "net/minecraft/client/network/ClientPlayerInteractionManager.attackBlock(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;)Z"))
     private boolean checkForEntity(ClientPlayerInteractionManager manager, BlockPos pos, Direction direction) {

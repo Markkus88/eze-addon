@@ -9,7 +9,8 @@
     "MultiplayerScreenMixin",
     "ServerListAccessor",
     "ClientConnectionMixin",
-    "WorldBorderMixin"
+    "WorldBorderMixin",
+    "DiscordPresenceMixin"
   ],
   "injectors": {
     "defaultRequire": 1

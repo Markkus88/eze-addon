@@ -1,6 +1,5 @@
 package ARm8.addon.utils.world;
 
-import ARm8.addon.utils.misc.Formatter;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.hit.BlockHitResult;
@@ -14,7 +13,6 @@ import net.minecraft.world.RaycastContext;
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
 public class RotationHelper {
-
 
     public static Vec3d getEyePos(Entity entity) {
         if (entity.equals(mc.player)) return getSelfEye();
@@ -48,11 +46,6 @@ public class RotationHelper {
         return new Vec3d(pos.getX() + 0.5 + direction.getVector().getX() * 0.5, pos.getY() + 0.5 + direction.getVector().getY() * 0.5, pos.getZ() + 0.5 + direction.getVector().getZ() * 0.5);
     }
 
-
-
-
-
-
     public static float getGCD() {
         float f = (float) (0.2112676 * 0.6D + 0.2D);
         return (f * f * f * 8.0f) * 0.15f;
@@ -72,11 +65,12 @@ public class RotationHelper {
         else diffY = (targetEntity.getBoundingBox().minY + targetEntity.getBoundingBox().maxY) / 2.0D - mc.player.getY() + mc.player.getEyeY() - 0.5;
 
         double dist = MathHelper.sqrt((float) (diffX * diffX + diffZ * diffZ));
-        float yaw = (float) (((Math.atan2(diffZ, diffX) * 180.0 / Math.PI) - 90.0f)) + Formatter.random(-2, 2);
-        float pitch = (float) (-(Math.atan2(diffY, dist) * 180.0 / Math.PI)) + Formatter.random(-2, 2);
+        float yaw = (float) (((Math.atan2(diffZ, diffX) * 180.0 / Math.PI) - 90.0f)) + random(-2, 2);
+        float pitch = (float) (-(Math.atan2(diffY, dist) * 180.0 / Math.PI)) + random(-2, 2);
         yaw = mc.player.getYaw() + getFixedRotation(MathHelper.wrapDegrees(yaw - mc.player.getYaw()));
         pitch = mc.player.getPitch() + getFixedRotation(MathHelper.wrapDegrees(pitch - mc.player.getPitch()));
         return new float[] { yaw, pitch };
     }
 
+    public static int random(int min, int max) { return min + (int) (Math.random() * ((max - min) + 1)); }
 }

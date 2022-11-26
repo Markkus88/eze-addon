@@ -31,11 +31,13 @@ public class Addon extends MeteorAddon {
         LOG.info("Initializing eze");
 
         //Commands
+
         
         Commands.get().add(new AutoVClipCommand());
         Commands.get().add(new BloatCommand());
         Commands.get().add(new CenterCommand());
         Commands.get().add(new ClearChatCommand());
+        Commands.get().add(new CoordinatesCommand());
         Commands.get().add(new CrashItemCommand());
         Commands.get().add(new DelayCommand());
         Commands.get().add(new DesyncCommand());
@@ -50,6 +52,7 @@ public class Addon extends MeteorAddon {
         Commands.get().add(new ServerCommand());
         Commands.get().add(new SleepCommand());
         Commands.get().add(new SoftLeaveCommand());
+        Commands.get().add(new TeleportCommand());
         Commands.get().add(new UUIDCommand());
 
         //Combat
@@ -66,7 +69,6 @@ public class Addon extends MeteorAddon {
 
         Modules.get().add(new ChatEncryption());
         Modules.get().add(new Config());
-        Modules.get().add(new CoordLogger());
         Modules.get().add(new CustomPackets());
         Modules.get().add(new GroupChat());
         Modules.get().add(new Placeholders());
@@ -89,6 +91,8 @@ public class Addon extends MeteorAddon {
         //Player
 
         Modules.get().add(new AutoCraft());
+        Modules.get().add(new AutoExtinguish());
+        Modules.get().add(new AutoFarm());
         Modules.get().add(new AutoSpectre());
         Modules.get().add(new InstaMine());
         Modules.get().add(new MultiTask());
@@ -118,6 +122,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new ChunkCrash());
         Modules.get().add(new ConsoleFlood());
         Modules.get().add(new ContainerCrash());
+        Modules.get().add(new CorruptLoginPacket());
         Modules.get().add(new CraftingCrash());
         Modules.get().add(new CreativeCrash());
         Modules.get().add(new EntityCrash());
@@ -128,6 +133,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new MovementCrash());
         Modules.get().add(new PacketSpammer());
         Modules.get().add(new PortalGodMode());
+        Modules.get().add(new ProxyBypass());
         Modules.get().add(new SequenceCrash());
 
         //HUD 

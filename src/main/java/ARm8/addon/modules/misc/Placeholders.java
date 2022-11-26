@@ -260,8 +260,6 @@ public class Placeholders extends Module {
             add(new Pair<>(":clock-1:", "⌚"));
             add(new Pair<>(":clock-2:", "⌛"));
             add(new Pair<>(":clock-3:", "⏳"));
-
-            add(new Pair<>(":vector:", "https://cally72jhb.github.io/website/"));
         }};
     }
 
