@@ -53,6 +53,7 @@ public class Addon extends MeteorAddon {
         Commands.get().add(new SleepCommand());
         Commands.get().add(new SoftLeaveCommand());
         Commands.get().add(new TeleportCommand());
+        Commands.get().add(new TrashCommand());
         Commands.get().add(new UUIDCommand());
 
         //Combat
