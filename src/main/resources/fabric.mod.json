@@ -11,16 +11,16 @@
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "ARm8.addon.Addon"
+      "ARm8.eze.Addon"
     ]
   },
   "mixins": [
-    "addon.mixins.json"
+    "eze.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,225,225"
   },
-  "accessWidener": "addon.accesswidener",
+  "accessWidener": "eze.accesswidener",
   "depends": {
     "java": ">=17",
     "minecraft": ">=${mc_version}",
