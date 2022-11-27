@@ -3,6 +3,7 @@ package ARm8.eze.modules.misc;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.orbit.EventHandler;
+
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.EnumSetting;
@@ -19,9 +20,24 @@ public class Config extends Module {
 
     // Chat
 
-    public final Setting<Boolean> ezePrefix = sgChat.add(new BoolSetting.Builder().name("eze-prefix").description("Replaces Meteor prefix with ez prefix.").defaultValue(true).build());
-    public final Setting<Boolean> chatFormatting = sgChat.add(new BoolSetting.Builder().name("chat-formatting").description("Changes style of messages.").defaultValue(false).build());
-    private final Setting<ChatFormatting> formattingMode = sgChat.add(new EnumSetting.Builder<ChatFormatting>().name("mode").description("The style of messages.").defaultValue(ChatFormatting.Bold).visible(chatFormatting::get).build());
+    public final Setting<Boolean> ezePrefix = sgChat.add(new BoolSetting.Builder()
+        .name("eze-prefix")
+        .description("Replaces Meteor prefix with eze prefix.")
+        .defaultValue(true)
+        .build());
+
+    public final Setting<Boolean> chatFormatting = sgChat.add(new BoolSetting.Builder()
+        .name("chat-formatting")
+        .description("Changes style of messages.")
+        .defaultValue(false)
+        .build());
+
+    private final Setting<ChatFormatting> formattingMode = sgChat.add(new EnumSetting.Builder<ChatFormatting>()
+        .name("mode")
+        .description("The style of messages.")
+        .defaultValue(ChatFormatting.Bold)
+        .visible(chatFormatting::get)
+        .build());
 
     public Config() {
         super(Categories.Misc, "config", "Configuration of eze");

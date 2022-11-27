@@ -17,4 +17,9 @@ public class DiscordPresenceMixin {
         args.set(0, "icon");
         args.set(1, "eze 0.0.0");
     }
+
+    @ModifyArg(method = "onTick", at = @At(value = "INVOKE", target = "Lmeteordevelopment/discordipc/RichPresence;setDetails(Ljava/lang/String;)V", ordinal = 1))
+    private String modifyDetails(String details) {
+        return null;
+    }
 }
