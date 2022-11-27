@@ -2,6 +2,8 @@ package ARm8.eze.modules.misc;
 
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
+import meteordevelopment.meteorclient.systems.modules.Modules;
+import meteordevelopment.meteorclient.systems.modules.misc.DiscordPresence;
 import meteordevelopment.orbit.EventHandler;
 
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
@@ -16,7 +18,26 @@ import net.minecraft.util.Formatting;
 
 public class Config extends Module {
     public final SettingGroup sgGeneral = settings.getDefaultGroup();
+    public final SettingGroup sgDiscordPresence = settings.createGroup("Discord Presence");
     public final SettingGroup sgChat = settings.createGroup("Chat");
+
+    // Discord Presence
+
+    public final Setting<Boolean> discordPresence = sgDiscordPresence.add(new BoolSetting.Builder()
+        .name("discord-presence")
+        .description("Shows that you are using eze in Discord.")
+        .onChanged((c) -> {
+			if (isActive()) {
+				if (Modules.get().get(DiscordPresence.class).isActive()) {
+                    Modules.get().get(DiscordPresence.class).toggle();
+                    Modules.get().get(DiscordPresence.class).toggle();
+                } else if (!Modules.get().get(DiscordPresence.class).isActive()) {
+                    Modules.get().get(DiscordPresence.class).toggle();
+                }
+			}
+		})
+        .defaultValue(true)
+        .build());
 
     // Chat
 
@@ -41,6 +62,8 @@ public class Config extends Module {
 
     public Config() {
         super(Categories.Misc, "config", "Configuration of eze");
+
+        runInMainMenu = true;
     }
 
     @EventHandler

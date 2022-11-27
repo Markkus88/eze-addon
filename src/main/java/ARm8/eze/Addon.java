@@ -1,6 +1,7 @@
 package ARm8.eze;
 
 import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.commands.Commands;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudGroup;
@@ -32,7 +33,6 @@ public class Addon extends MeteorAddon {
 
         //Commands
 
-        
         Commands.get().add(new AutoVClipCommand());
         Commands.get().add(new BloatCommand());
         Commands.get().add(new CenterCommand());
@@ -142,6 +142,8 @@ public class Addon extends MeteorAddon {
         Hud.get().register(BindsHud.INFO);
         Hud.get().register(ItemCounterHud.INFO);
         Hud.get().register(LogoHud.INFO);
+
+        if (!Modules.get().get(Config.class).isActive()) Systems.addPreLoadTask(() -> Modules.get().get(Config.class).toggle());
     }
 
     @Override
