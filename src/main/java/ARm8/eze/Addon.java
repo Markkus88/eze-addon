@@ -87,6 +87,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new PacketDigits());
         Modules.get().add(new PacketFly());
         Modules.get().add(new RubberbandFly());
+        Modules.get().add(new WideScaffold());
         Modules.get().add(new WorldGuardBypass());
 
         //Player
